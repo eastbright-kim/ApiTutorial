@@ -16,6 +16,9 @@
 		DB191AC3260E405100A7BA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB191AC1260E405100A7BA0D /* LaunchScreen.storyboard */; };
 		DB1F3694260F876A00D7650B /* MyAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F3693260F876A00D7650B /* MyAlamofireManager.swift */; };
 		DB1F3697260F88A800D7650B /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F3696260F88A800D7650B /* BaseInterceptor.swift */; };
+		DB26313B26104FC300F4026C /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26313A26104FC300F4026C /* MyLogger.swift */; };
+		DB2631422610526C00F4026C /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2631412610526C00F4026C /* MyApiStatusLogger.swift */; };
+		DB263145261065BC00F4026C /* MySearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB263144261065BC00F4026C /* MySearchRouter.swift */; };
 		DB90A990260E486400058B47 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90A98F260E486400058B47 /* Constants.swift */; };
 		DB90A995260E48BA00058B47 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90A994260E48BA00058B47 /* UserListVC.swift */; };
 		DB90A998260E48C600058B47 /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90A997260E48C600058B47 /* PhotoCollectionVC.swift */; };
@@ -35,6 +38,9 @@
 		DB191AC4260E405100A7BA0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1F3693260F876A00D7650B /* MyAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlamofireManager.swift; sourceTree = "<group>"; };
 		DB1F3696260F88A800D7650B /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
+		DB26313A26104FC300F4026C /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
+		DB2631412610526C00F4026C /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
+		DB263144261065BC00F4026C /* MySearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchRouter.swift; sourceTree = "<group>"; };
 		DB90A98F260E486400058B47 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB90A994260E48BA00058B47 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		DB90A997260E48C600058B47 /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 			children = (
 				DB1F3693260F876A00D7650B /* MyAlamofireManager.swift */,
 				DB1F3696260F88A800D7650B /* BaseInterceptor.swift */,
+				DB26313A26104FC300F4026C /* MyLogger.swift */,
+				DB2631412610526C00F4026C /* MyApiStatusLogger.swift */,
+				DB263144261065BC00F4026C /* MySearchRouter.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -251,9 +260,12 @@
 				DB90A998260E48C600058B47 /* PhotoCollectionVC.swift in Sources */,
 				DB1F3697260F88A800D7650B /* BaseInterceptor.swift in Sources */,
 				DB191AB7260E405000A7BA0D /* AppDelegate.swift in Sources */,
+				DB263145261065BC00F4026C /* MySearchRouter.swift in Sources */,
 				DB90A995260E48BA00058B47 /* UserListVC.swift in Sources */,
 				DB1F3694260F876A00D7650B /* MyAlamofireManager.swift in Sources */,
+				DB2631422610526C00F4026C /* MyApiStatusLogger.swift in Sources */,
 				DB191AB9260E405000A7BA0D /* SceneDelegate.swift in Sources */,
+				DB26313B26104FC300F4026C /* MyLogger.swift in Sources */,
 				DB90A99B260E48CF00058B47 /* BaseVC.swift in Sources */,
 				DB90A990260E486400058B47 /* Constants.swift in Sources */,
 			);

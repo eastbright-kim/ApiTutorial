@@ -16,10 +16,12 @@ final class MyAlamofireManager {
         BaseInterceptor()
     ])
     
+    let monitors = [MyLogger(), MyApiStatusLogger()] as [EventMonitor]
+    
     var session: Session
     
     private init(){
-        session = Session(interceptor: interceptors)
+        session = Session(interceptor: interceptors, eventMonitors: monitors)
     }
     
 }

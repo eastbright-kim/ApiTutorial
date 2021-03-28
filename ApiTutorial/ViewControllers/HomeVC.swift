@@ -183,9 +183,9 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     }
     
     @IBAction func searchBtnTapped(_ sender: UIButton) {
-        pushVC()
+//        pushVC()
         
-        let url = API.BASE_URL + "search/photos/"
+//        let url = API.BASE_URL + "search/photos/"
         
         guard let userInput = self.searchBar.text else { return }
         
@@ -195,12 +195,27 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
         //            debugPrint(response)
         //
         
-        MyAlamofireManager.shared.session.request(url).responseJSON { (response) in
+        var urlToCall: URLRequestConvertible!
+        
+        switch searchFilterSegment.selectedSegmentIndex {
+        case 0:
+            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+        case 1:
+            urlToCall = MySearchRouter.searchUser(term: userInput)
+        default:
+            print("segmented default")
+        }
+        
+        
+        MyAlamofireManager
+            .shared
+            .session
+            .request(urlToCall)
+            .responseJSON { (response) in
+            print("start response")
             debugPrint(response)
         }
     }
-    
-    
     
     
     @IBAction func searchFilterValueChanged(_ sender: UISegmentedControl) {

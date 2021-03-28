@@ -12,6 +12,8 @@ class BaseInterceptor: RequestInterceptor {
     
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         
+        print("Interceptor adapt func called")
+        //거의 맨 처음에 시작됨
         var urlRequest = urlRequest
         urlRequest.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
@@ -31,6 +33,7 @@ class BaseInterceptor: RequestInterceptor {
     }
     
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
+        print("Interceptor retry() called")
         completion(.doNotRetry)
     }
     

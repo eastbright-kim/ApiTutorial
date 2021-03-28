@@ -20,7 +20,7 @@ class BaseInterceptor: RequestInterceptor {
         
         var dictionary = [String:String]()
         
-        dictionary.updateValue(API.CLIENT_ID, forKey: "client_id")
+//        dictionary.updateValue(API.CLIENT_ID, forKey: "client_id")
         
         do{
             urlRequest = try URLEncodedFormParameterEncoder().encode(dictionary, into: urlRequest)
@@ -34,6 +34,18 @@ class BaseInterceptor: RequestInterceptor {
     
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         print("Interceptor retry() called")
+        
+        if let statusCode = request.response?.statusCode {
+            
+            let data = ["statusCode" : statusCode]
+            
+            NotificationCenter.default.post(name: NSNotification.Name(NOTIFICATION.API.AUTH_FAIL), object: nil, userInfo: data)
+            
+        } else {
+            completion(.doNotRetry)
+            return
+        }
+        
         completion(.doNotRetry)
     }
     

@@ -20,7 +20,7 @@ class BaseInterceptor: RequestInterceptor {
         
         var dictionary = [String:String]()
         
-//        dictionary.updateValue(API.CLIENT_ID, forKey: "client_id")
+        dictionary.updateValue(API.CLIENT_ID, forKey: "client_id")
         
         do{
             urlRequest = try URLEncodedFormParameterEncoder().encode(dictionary, into: urlRequest)

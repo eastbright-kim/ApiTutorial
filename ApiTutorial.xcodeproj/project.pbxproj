@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52AD6B95B5308A8426FA6007 /* Pods_ApiTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED7119BA208EC48CFFB0634 /* Pods_ApiTutorial.framework */; };
+		DB1480392611A2AB00972D6E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1480382611A2AB00972D6E /* Photo.swift */; };
+		DB14803D2611A4CE00972D6E /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB14803C2611A4CE00972D6E /* MyError.swift */; };
 		DB191AB7260E405000A7BA0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB191AB6260E405000A7BA0D /* AppDelegate.swift */; };
 		DB191AB9260E405000A7BA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB191AB8260E405000A7BA0D /* SceneDelegate.swift */; };
 		DB191ABB260E405000A7BA0D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB191ABA260E405000A7BA0D /* HomeVC.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		010D911AFE57B3C710A3E554 /* Pods-ApiTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTutorial.release.xcconfig"; path = "Target Support Files/Pods-ApiTutorial/Pods-ApiTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		D6E2E8DEE0B3A05C0FB32D4D /* Pods-ApiTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTutorial.debug.xcconfig"; path = "Target Support Files/Pods-ApiTutorial/Pods-ApiTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		DB1480382611A2AB00972D6E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		DB14803C2611A4CE00972D6E /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		DB191AB3260E405000A7BA0D /* ApiTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB191AB6260E405000A7BA0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB191AB8260E405000A7BA0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB1480372611A29E00972D6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB1480382611A2AB00972D6E /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DB191AAA260E405000A7BA0D = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 		DB191AB5260E405000A7BA0D /* ApiTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				DB1480372611A29E00972D6E /* Model */,
 				DB1F3692260F874400D7650B /* API */,
 				DB90A98E260E485400058B47 /* Utils */,
 				DB191AB6260E405000A7BA0D /* AppDelegate.swift */,
@@ -129,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				DB90A98F260E486400058B47 /* Constants.swift */,
+				DB14803C2611A4CE00972D6E /* MyError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -262,7 +276,9 @@
 				DB191AB7260E405000A7BA0D /* AppDelegate.swift in Sources */,
 				DB263145261065BC00F4026C /* MySearchRouter.swift in Sources */,
 				DB90A995260E48BA00058B47 /* UserListVC.swift in Sources */,
+				DB1480392611A2AB00972D6E /* Photo.swift in Sources */,
 				DB1F3694260F876A00D7650B /* MyAlamofireManager.swift in Sources */,
+				DB14803D2611A4CE00972D6E /* MyError.swift in Sources */,
 				DB2631422610526C00F4026C /* MyApiStatusLogger.swift in Sources */,
 				DB191AB9260E405000A7BA0D /* SceneDelegate.swift in Sources */,
 				DB26313B26104FC300F4026C /* MyLogger.swift in Sources */,

@@ -195,30 +195,30 @@ class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
         //            debugPrint(response)
         //
         
-        var urlToCall: URLRequestConvertible!
+//        var urlToCall: URLRequestConvertible?
+//
+//        switch searchFilterSegment.selectedSegmentIndex {
+//        case 0:
+//            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+//        case 1:
+//            urlToCall = MySearchRouter.searchUser(term: userInput)
+//        default:
+//            print("segmented default")
+//        }
         
-        switch searchFilterSegment.selectedSegmentIndex {
-        case 0:
-            urlToCall = MySearchRouter.searchPhotos(term: userInput)
-        case 1:
-            urlToCall = MySearchRouter.searchUser(term: userInput)
-        default:
-            print("segmented default")
-        }
-        
-        
-        MyAlamofireManager
-            .shared
-            .session
-            .request(urlToCall)
-            .validate(statusCode: 200..<401)
-            .responseJSON { (response) in
-            print("start response")
-            debugPrint(response)
-        }
+       
+            MyAlamofireManager.shared.searchPhoto(searchTerm: userInput, completion: { result in
+                
+                switch result {
+                case .success(let photos):
+                    print(photos.count)
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.view.makeToast("\(error.rawValue)", duration: 1.5, position: .center)
+                    }
+                }
+            })
     }
-    
-    
     @IBAction func searchFilterValueChanged(_ sender: UISegmentedControl) {
         
         var searchBarTitle = ""
@@ -239,5 +239,5 @@ class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
     }
     
     
-}
 
+}
